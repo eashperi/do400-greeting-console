@@ -23,7 +23,9 @@ pipeline {
 
     stage('Release') {
       steps {
-        sh 'oc project gcjpfj-greetings oc start-build greeting-console --follow --wait'
+        sh '''oc project gcjpfj-greetings 
+'''
+        sh 'oc start-build greeting-console --follow --wait'
       }
     }
 
